@@ -19,6 +19,8 @@ import { HotelListError, HotelListRequest } from "../../redux/actions";
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
+import EditIcon from '@mui/icons-material/Edit';
+import { Link } from "react-router-dom";
 
 const ExpandMore = styled((props) => {
   const { expand, ...other } = props;
@@ -173,8 +175,20 @@ export default function RecipeReviewCard() {
                     </Typography>
                   </CardContent>
                 </Collapse> */}
+          
+            <Link to= {`/edit/${val?.id}`}>
+            <Button variant="contained"  >
+            <span>Edit</span>
+              <EditIcon />
+              </Button>
+        </Link>
+            
+           
+        
+           
             </Card>
           </Grid>
+
         );
       })}
     </Grid>

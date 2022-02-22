@@ -1,6 +1,7 @@
 import { registrationRequest } from "./registration";
 import { loginRequest } from "./login";
 import { hotelListRequest } from "./hotelListSaga";
+import {editListRequest} from "./edithotelListsaga"
 // import { CreatePollRequest } from "./CreatePollsaga";
 // import { UpdateTitleRequest } from "./PollUpdateSaga/TitleUpdateSaga";
 // import { DeletePollRequest } from "./PollUpdateSaga/DeletePollSaga";
@@ -13,6 +14,7 @@ function* watchAllSaga() {
       fork(registrationRequest),
       fork(loginRequest),
       fork(hotelListRequest),
+      fork(editListRequest),
       //   fork(CreatePollRequest),
       //   fork(UpdateTitleRequest),
       //   fork(DeletePollRequest),
