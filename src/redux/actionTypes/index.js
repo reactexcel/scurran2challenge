@@ -12,4 +12,4 @@ export const HotelList_Error='HotelList_Error'
 
 export const Edit_HotelList_Request='Edit_HotelList_Request';
 export const Edit_HotelList_Success='Edit_HotelList_Success';
-export const Edit_HotelList_Error='Edit_HotelList_Error'
+export const Edit_HotelList_Error='Edit_HotelList_Error';

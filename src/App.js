@@ -15,9 +15,9 @@ function App() {
     <>
       <Routes>
         <Route exact path="/" element={<Login />} />
-        <Route path="/registration" element={<Registration />} />
-        <Route path="/dashboard" element={<Dashboard/>} /> 
-        <Route path="/edit" element={<EditForm/>} /> 
+        <Route exact path="/registration" element={<Registration />} />
+        <Route exact path="/dashboard" element={<Dashboard/>} /> 
+        <Route exact path="/edit/:id" element={<EditForm/>} /> 
         {/* <PrivateRouting path="/createpoll" component={CreatePoll} />
         <PrivateRouting path="/admin/edit/:id"component={EditPoll}/>  */}
       </Routes>

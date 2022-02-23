@@ -13,6 +13,6 @@ export const HotelListRequest = createAction(actions.HotelList_Request);
 export const HotelListSuccess = createAction(actions.HotelList_Success);
 export const HotelListError = createAction(actions.HotelList_Error);
 
-export const EditHotelLyistRequest = createAction(actions.Edit_HotelList_Request);
+export const EditHotelListRequest = createAction(actions.Edit_HotelList_Request);
 export const EditHotelListSuccess = createAction(actions.Edit_HotelList_Success);
 export const EditHotelListError = createAction(actions.Edit_HotelList_Error);

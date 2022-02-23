@@ -11,7 +11,12 @@ import axios from "axios";
     const { id } = action.payload;
     const response = yield call(
       axios.get,
-      ` http://176.9.137.77:8024/hotels_list/?hotel_id=${id}`,
+      `http://176.9.137.77:8024/hotels_list/?hotel_id=${id}`,
+      {
+        headers: {
+            Authorization: `Bearer ${localStorage.getItem("token")}`,
+        },
+      }
     );
     let data = response.data;
     console.log(data, "======121314");
@@ -22,7 +27,7 @@ import axios from "axios";
       yield put(EditHotelListError({ error: data }));
     }
   } catch (error) {
-    debugger
+    // debugger
     console.log(error, "error")
     yield put(EditHotelListError({ error: error }));
   }
