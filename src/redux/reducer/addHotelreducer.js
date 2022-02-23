@@ -4,25 +4,23 @@ const initialstate = {
   isLogin: false,
 };
 
-const HotelListReducer = (state = initialstate, action) => {
+export const addHotelReducer = (state = initialstate, action) => {
   switch (action.type) {
-    case actions.HotelList_Request:
+    case actions.AddHotel_Request:
       return {
         ...state,
         isLoading: true,
         isLogin: false,
       };
 
-    case actions.HotelList_Success:
+    case actions.AddHotel_Success:
       return {
         ...state,
         isLogin: true,
         isLoading: false,
-
-        hotelList: action.payload?.response?.data,
+        addhotel: action.payload?.response?.data,
       };
-
-    case actions.HotelList_Error:
+    case actions.AddHotel_Error:
       return {
         ...state,
         isLoading: false,
@@ -34,4 +32,4 @@ const HotelListReducer = (state = initialstate, action) => {
   }
 };
 
-export default HotelListReducer;
+export default addHotelReducer;
