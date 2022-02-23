@@ -10,7 +10,7 @@ function* updateHotelsaga(action) {
     console.log("callled", action);
     const {
       id,
-      name,
+      hotelname,
       hotel_type,
       manager,
       address_line1,
@@ -22,7 +22,7 @@ function* updateHotelsaga(action) {
     const response = yield call(
       axios.patch,
 
-      `http://176.9.137.77:8024/hotel/{${id}${name}${hotel_type}${manager}${address_line1}${address_line2}${pincode}${no_of_days_advance}${hotel_image}}/`,
+      `http://176.9.137.77:8024/hotel/{${id}${hotelname}${hotel_type}${manager}${address_line1}${address_line2}${pincode}${no_of_days_advance}${hotel_image}}/`,
       {
         ...action.payload,
       }
