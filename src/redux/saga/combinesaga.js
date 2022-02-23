@@ -3,6 +3,7 @@ import { loginRequest } from "./login";
 import { hotelListRequest } from "./hotelListSaga";
 import { addHotelRequest } from "./addHotel";
 import {editListRequest} from "./edithotelListsaga"
+import {UpdateHotelRequest} from "./updateHotelsaga"
 import { fork, all } from "redux-saga/effects";
 
 function* watchAllSaga() {
@@ -13,6 +14,7 @@ function* watchAllSaga() {
       fork(hotelListRequest),
       fork(addHotelRequest),
       fork(editListRequest),
+      fork(UpdateHotelRequest),
     ]);
   }
 }

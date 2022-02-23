@@ -43,6 +43,7 @@ axios.interceptors.response.use(
         console.log("refresh response setted");
         localStorage.setItem("token", res?.data.access);
         originalRequest._retry = true;
+        window.location.reload ;
       }
     }
     // Any status codes that falls outside the range of 2xx cause this function to trigger

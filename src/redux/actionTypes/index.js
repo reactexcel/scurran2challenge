@@ -14,6 +14,10 @@ export const AddHotel_Request = "AddHotel_Request";
 export const AddHotel_Success = "AddHotel_Success";
 export const AddHotel_Error = "AddHotel_Error";
 
-export const Edit_HotelList_Request='Edit_HotelList_Request';
-export const Edit_HotelList_Success='Edit_HotelList_Success';
-export const Edit_HotelList_Error='Edit_HotelList_Error'
+export const Edit_HotelList_Request = "Edit_HotelList_Request";
+export const Edit_HotelList_Success = "Edit_HotelList_Success";
+export const Edit_HotelList_Error = "Edit_HotelList_Error";
+
+export const Update_Hotel_Request = "Update_Hotel_Request";
+export const Update_Hotel_Success = "Update_Hotel_Success";
+export const Update_Hotel_Error = "Update_Hotel_Error";
