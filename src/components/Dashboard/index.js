@@ -20,6 +20,8 @@ import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import { useNavigate } from "react-router-dom";
+import EditIcon from '@mui/icons-material/Edit';
+import { Link } from "react-router-dom";
 
 const ExpandMore = styled((props) => {
   const { expand, ...other } = props;
@@ -114,6 +116,12 @@ export default function RecipeReviewCard() {
                   {`${val?.address_line1} ${val?.address_line2}` || ""}
                 </Typography>
               </CardContent>
+              <Link to= {`/edit/${val?.id}`}>
+            <Button variant="contained"  >
+            <span>Edit</span>
+              <EditIcon />
+              </Button>
+        </Link>
             </Card>
           </Grid>
 

@@ -15,9 +15,6 @@ export function* hotelListSaga(action) {
     if (data.success) {
       yield put(HotelListSuccess({ response: { data: data } }));
     } 
-    // else if (data.status=='401'){
-
-    // }
     else {
       yield put(HotelListError({ error: data }));
     }
