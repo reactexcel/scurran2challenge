@@ -6,6 +6,7 @@ import Login from "./components/Login/Login";
 import { Routes, Route } from "react-router-dom";
 import "./App.css";
 import EditForm from "../src/components/EditForm";
+import HotelEvent from "./components/Events";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route exact path="/registration" element={<Registration />} />
         <Route exact path="/dashboard" element={<Dashboard />} />
         <Route exact path="/edit/:id" element={<EditForm />} />
+        <Route exact path="/event/:id" element={<HotelEvent />} />
         <Route path="/addhotel" element={<AddHotel />} />
       </Routes>
     </>

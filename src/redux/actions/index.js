@@ -24,3 +24,7 @@ export const EditHotelListSuccess = createAction(
   actions.Edit_HotelList_Success
 );
 export const EditHotelListError = createAction(actions.Edit_HotelList_Error);
+
+export const HotelEventRequest = createAction(actions.Hotel_Event_Request);
+export const HotelEventSuccess = createAction(actions.Hotel_Event_Success);
+export const HotelEventError = createAction(actions.Hotel_Event_Error);
