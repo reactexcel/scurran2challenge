@@ -2,18 +2,13 @@ import { takeLatest, put, call } from "redux-saga/effects";
 
 import { HotelListError, HotelListSuccess } from "../actions";
 import * as actions from "../actionTypes";
-import axios from "axios";
+import axios from "../axios";
 
 export function* hotelListSaga(action) {
   try {
     const response = yield call(
       axios.get,
-      ` http://176.9.137.77:8024/hotels_list/`,
-      {
-        headers: {
-            Authorization: `Bearer ${localStorage.getItem("token")}`,
-        },
-      }
+      ` http://176.9.137.77:8024/hotels_list/`
     );
     let data = response.data;
     console.log(data, "======121314");
