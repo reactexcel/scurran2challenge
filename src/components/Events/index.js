@@ -37,7 +37,6 @@ const HotelEvent = () => {
     dispatch(HotelEventRequest({ id }));
   }, []);
 
-  console.log(hotelEventList, "==-090090909");
   return (
     <div style={{ padding: 20 }}>
       <Typography element="div" variant="h6">
