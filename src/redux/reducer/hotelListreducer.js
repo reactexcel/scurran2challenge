@@ -5,7 +5,6 @@ const initialstate = {
 };
 
 const HotelListReducer = (state = initialstate, action) => {
-    console.log(action,'-0-0-0-0-0-0')
   switch (action.type) {
     case actions.HotelList_Request:
       return {

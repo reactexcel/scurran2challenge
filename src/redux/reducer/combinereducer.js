@@ -1,23 +1,11 @@
 import { combineReducers } from "redux";
-
-// import Registrationreducer from "./Registrationreducer";
 import Loginreducer from "./login";
 import HotelListReducer from "./hotelListreducer";
-// import CreateNewPollreducer from "./createNewPollreducer";
-// import UpdateTitlereducer from "./UpdatePoll/UpdatePollTitle";
-// import DeletePollreducer from "./UpdatePoll/DeletePoll";
-// import DeleteOptionreducer from "./UpdatePoll/DeleteOption";
-
-// import AddNewOptionreducer from "./UpdatePoll/AddNewOption";
+import { addHotelReducer } from "./addHotelreducer";
 const rootReducer = combineReducers({
-  //   Registrationstatus: Registrationreducer,
   Loginstatus: Loginreducer,
   hotelListStatus: HotelListReducer,
-  //   CreateNewPollstatus: CreateNewPollreducer,
-  //   UpdateTitlestatus: UpdateTitlereducer,
-  //   DeletePollstatus: DeletePollreducer,
-  //   DeleteOptionstatus: DeleteOptionreducer,
-  //   AddNewOptionstatus: AddNewOptionreducer,
+  addHotelStatus:addHotelReducer
 });
 
 export default rootReducer;

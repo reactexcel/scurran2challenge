@@ -1,7 +1,7 @@
 import React from "react";
 import Registration from "./components/Registration/registrationForm";
 import Dashboard from "./components/Dashboard"
-// import CreatePoll from "./Components/CreatePoll/CreatePoll";
+import AddHotel from "./components/AddHotel";
 import Login from "./components/Login/Login";
 
 // import EditPoll from "./Components/Updatepoll/EditPoll"
@@ -15,7 +15,8 @@ function App() {
       <Routes>
         <Route exact path="/" element={<Login />} />
         <Route path="/registration" element={<Registration />} />
-        <Route path="/dashboard" element={<Dashboard/>} /> 
+        <Route path="/dashboard" element={<Dashboard/>} />
+        <Route path="/addhotel" element={<AddHotel/>} />  
         {/* <PrivateRouting path="/createpoll" component={CreatePoll} />
         <PrivateRouting path="/admin/edit/:id"component={EditPoll}/>  */}
       </Routes>

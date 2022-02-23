@@ -2,7 +2,7 @@ import { takeLatest, put, call } from "redux-saga/effects";
 
 import { LoginSuccess, LoginError } from "../actions";
 import * as actions from "../actionTypes";
-import axios from "axios";
+import axios from "../axios";
 
 export function* loginSaga(action) {
   try {
@@ -17,9 +17,9 @@ export function* loginSaga(action) {
       }
     );
     let data = response.data;
-    console.log(data,'======')
     if (data.success) {
       localStorage.setItem("token", data.result.access);
+      localStorage.setItem("refreshtoken", data.result.refresh);
       yield put(LoginSuccess({ response: { data: data} }));
     } else {
       yield put(LoginError({ error: data }));

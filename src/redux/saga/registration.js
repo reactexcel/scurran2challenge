@@ -5,7 +5,7 @@ import {
   RegistationSuccess,
   RegistationError,
 } from "../actions";
-import axios from "axios";
+import axios from "../axios";
 
 export default function* registrationSaga(action) {
   try {
