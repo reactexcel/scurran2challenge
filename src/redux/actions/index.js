@@ -25,11 +25,10 @@ export const EditHotelListSuccess = createAction(
 );
 export const EditHotelListError = createAction(actions.Edit_HotelList_Error);
 
-
-export const UpdateHotelRequest = createAction(
-  actions.Update_Hotel_Request
-);
-export const UpdateHotelSuccess = createAction(
-  actions.Update_Hotel_Success
-);
+export const UpdateHotelRequest = createAction(actions.Update_Hotel_Request);
+export const UpdateHotelSuccess = createAction(actions.Update_Hotel_Success);
 export const UpdateHotelError = createAction(actions.Update_Hotel_Error);
+
+export const HotelEventRequest = createAction(actions.Hotel_Event_Request);
+export const HotelEventSuccess = createAction(actions.Hotel_Event_Success);
+export const HotelEventError = createAction(actions.Hotel_Event_Error);

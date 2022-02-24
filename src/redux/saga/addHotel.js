@@ -12,7 +12,8 @@ export function* addHotelSaga(action) {
       {
         ...action.payload,
       }
-    );
+      );
+      console.log(action.payload)
     let data = response.data;
     if (data.success) {
       yield put(AddHotelSuccess({ response: { data: data } }));

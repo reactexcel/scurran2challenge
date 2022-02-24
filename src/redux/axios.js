@@ -32,8 +32,6 @@ axios.interceptors.response.use(
   async function (error) {
     const originalRequest = error.config;
     if (error.response.status === 401) {
-      console.log("Auth error");
-
       const res = await axios.post(
         `http://176.9.137.77:8024/api/token/refresh/`,
         { refresh: localStorage.getItem("refreshtoken") }
@@ -43,7 +41,7 @@ axios.interceptors.response.use(
         console.log("refresh response setted");
         localStorage.setItem("token", res?.data.access);
         originalRequest._retry = true;
-        window.location.reload ;
+        window.location.reload();
       }
     }
     // Any status codes that falls outside the range of 2xx cause this function to trigger

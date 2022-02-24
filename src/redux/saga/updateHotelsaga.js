@@ -10,22 +10,15 @@ function* updateHotelsaga(action) {
     console.log("callled", action);
     const {
       id,
-      hotelname,
-      hotel_type,
-      manager,
-      address_line1,
-      address_line2,
-      pincode,
-      no_of_days_advance,
-      hotel_image,
+      formdata
     } = action.payload;
+    console.log(action.payload, "dataaaaaaaaaa----------------")
     const response = yield call(
       axios.patch,
 
-      `http://176.9.137.77:8024/hotel/{${id}${hotelname}${hotel_type}${manager}${address_line1}${address_line2}${pincode}${no_of_days_advance}${hotel_image}}/`,
-      {
-        ...action.payload,
-      }
+      `http://176.9.137.77:8024/hotel/${id}/`,
+
+      formdata
     );
     let data = response.data;
     if (data.success) {
@@ -41,7 +34,5 @@ function* updateHotelsaga(action) {
 }
 
 export function* UpdateHotelRequest() {
-  console.log("ggggggggggggggggg");
-  // debugger
-  yield takeLatest(actions.Edit_HotelList_Request, updateHotelsaga);
+  yield takeLatest(actions.Update_Hotel_Request, updateHotelsaga);
 }
